@@ -1,0 +1,29 @@
+{
+  "name": "rect-angular",
+  "version": "1.0.0",
+  "authors": [
+    "Victor Tang <victortang1992@gmail.com>"
+  ],
+  "description": "Angular 1.x mimicking wrapper component",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "rect-angular.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/vtange/rect-angular/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
