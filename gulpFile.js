@@ -3,14 +3,14 @@ var vulcanize = require('gulp-vulcanize');
 var crisper = require('gulp-crisper');
 
 gulp.task('vulcanize', function() {
-  return gulp.src('index.html')
+  return gulp.src('index.html', {base: './'})
     .pipe(vulcanize({
       stripComments: true,
       inlineScripts: true,
       inlineCss: true
     }))
     .pipe(crisper())
-    .pipe(gulp.dest('index.html'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('default', ['vulcanize']);
