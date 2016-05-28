@@ -9,7 +9,6 @@ gulp.task('vulcanize', function() {
       inlineScripts: true,
       inlineCss: true
     }))
-    .pipe(crisper())
     .pipe(gulp.dest('./'));
 });
 
