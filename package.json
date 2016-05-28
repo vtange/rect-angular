@@ -1,0 +1,27 @@
+{
+  "name": "rect-angular",
+  "version": "1.0.0",
+  "description": "An element providing a starting point for your own reusable Polymer elements.",
+  "main": "gulpFile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtange/rect-angular.git"
+  },
+  "author": "Victor Tang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtange/rect-angular/issues"
+  },
+  "homepage": "https://github.com/vtange/rect-angular#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-crisper": "^1.1.0",
+    "gulp-vulcanize": "^6.1.0"
+  }
+}
