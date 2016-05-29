@@ -17,17 +17,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../../web-component-tester/browser.js"></script>
 
     <!-- Step 1: import the element to test -->
-    <link rel="import" href="../rect-angular.html">
+    <link rel="import" href="../x-text-input.html">
   </head>
   <body>
 
     <!-- You can use the document as a place to set up your fixtures. -->
-    <rect-angular></rect-angular>
+    <x-text-input></x-text-input>
 
     <script>
-      var myEl = document.querySelector('rect-angular');
+      var myEl = document.querySelector('x-text-input');
 
-      suite('<rect-angular>', function() {
+      suite('<x-text-input>', function() {
 
         test('defines the "author" property', function() {
           assert.equal(myEl.author.name, 'Dimitri Glazkov');
@@ -35,14 +35,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
 
         test('says hello', function() {
-          assert.equal(myEl.sayHello(), 'rect-angular says, Hello World!');
+          assert.equal(myEl.sayHello(), 'x-text-input says, Hello World!');
 
           var greetings = myEl.sayHello('greetings Earthlings');
-          assert.equal(greetings, 'rect-angular says, greetings Earthlings');
+          assert.equal(greetings, 'x-text-input says, greetings Earthlings');
         });
 
         test('fires lasers', function(done) {
-          myEl.addEventListener('rect-angular-lasers', function(event) {
+          myEl.addEventListener('x-text-input-lasers', function(event) {
             assert.equal(event.detail.sound, 'Pew pew!');
             done();
           });

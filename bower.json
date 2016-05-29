@@ -1,19 +1,19 @@
 {
-  "name": "rect-angular",
+  "name": "x-text-input",
   "version": "1.0.0",
   "authors": [
     "Victor Tang <victortang1992@gmail.com>"
   ],
-  "description": "Angular 1.x mimicking wrapper component",
+  "description": "HTML text input with X interactive",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
     "seed"
   ],
-  "main": "rect-angular.html",
+  "main": "x-text-input.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/vtange/rect-angular/",
+  "homepage": "https://github.com/vtange/x-text-input/",
   "ignore": [
     "/.*",
     "/test/",

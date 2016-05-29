@@ -1,7 +1,7 @@
 {
-  "name": "rect-angular",
+  "name": "x-text-input",
   "version": "1.0.0",
-  "description": "An element providing a starting point for your own reusable Polymer elements.",
+  "description": "HTML text input with X interactive",
   "main": "gulpFile.js",
   "directories": {
     "test": "test"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vtange/rect-angular.git"
+    "url": "git+https://github.com/vtange/x-text-input.git"
   },
   "author": "Victor Tang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vtange/rect-angular/issues"
+    "url": "https://github.com/vtange/x-text-input/issues"
   },
-  "homepage": "https://github.com/vtange/rect-angular#readme",
+  "homepage": "https://github.com/vtange/x-text-input#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-vulcanize": "^6.1.0"

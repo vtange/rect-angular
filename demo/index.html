@@ -12,23 +12,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>rect-angular Demo</title>
+    <title>x-text-input Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../rect-angular.html">
+    <link rel="import" href="../x-text-input.html">
   </head>
   <body>
 
-    <p>An example of <code>&lt;rect-angular&gt;</code>&#58;</p>
+    <p>An example of <code>&lt;x-text-input&gt;</code>&#58;</p>
 
     <button>Say Something</button>
 
-    <rect-angular author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
-      <h2>Hello rect-angular</h2>
-    </rect-angular>
+    <x-text-input author='{"name": "Lord Meowser", "image": "http://placekitten.com/g/200/300"}' fancy>
+      <h2>Hello x-text-input</h2>
+    </x-text-input>
 
     <script>
       document.querySelector('button').addEventListener('click', function() {
-        alert(document.querySelector('rect-angular').sayHello('Hallo!'));
+        alert(document.querySelector('x-text-input').sayHello('Hallo!'));
       });
     </script>
 
