@@ -26,11 +26,38 @@ Example:
       box-sizing: border-box;
 		border: 2px solid blue;
     }
+	:host > *{
+		transition:all 0.5s ease;
+	}
+    :host > span{
+	position: relative;
+	/* when activated 
+	left:1rem;
+	transform: rotate(45deg);
+	*/
+	}
+	:host > div{
+		width:0;
+		/* when activated 
+		width:200px;
+		*/
+	}
+	:host input{
+	/* follow width of form, show when activated */
+	width:100%;
+	padding: 6px 12px;
+	border:1px solid #ccc;
+	/* when activated 
+	padding: 0;
+	border: 0;
+	*/
+	}
+
   </style>
 
   <template>
-	<input type="text" placeholder="">
-	<div data-ng-style="rotatePlus()">+</div>
+	<div><input type="text" placeholder=""></div>
+	<span data-ng-style="rotatePlus()">+</span>
   </template>
 
 </dom-module>
