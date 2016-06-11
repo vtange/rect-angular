@@ -34,6 +34,7 @@ Example:
 		position: relative;
 		cursor: pointer;
 		font-size: 3rem;
+		color:#777;
 	}
 	:host > div{
 		width:0;
@@ -119,6 +120,7 @@ Example:
      */
     closeText: function() {
 		if(this.getAttribute("active")=="true"){
+			this.querySelector("input").value="";
 			this.setAttribute("active", false);
 		}
 		else{
