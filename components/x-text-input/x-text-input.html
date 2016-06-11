@@ -1,0 +1,129 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <x-text-input></x-text-input>
+
+@demo
+-->
+<dom-module id="x-text-input">
+
+  <style>
+    :host {
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+    }
+	:host > *{
+		transition:all 0.5s ease;
+		line-height: 2rem;
+	}
+    :host > span{
+		position: relative;
+		cursor: pointer;
+		font-size: 3rem;
+		color:#777;
+	}
+	:host > div{
+		width:0;
+	}
+	:host input{
+		width:100%;
+		height:3rem;
+		padding: 0;
+		border: 0;
+		vertical-align: middle;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.475);
+		border-radius: 2rem;
+		
+	}
+	:host[active="true"] > span{
+		transform: rotate(45deg);
+	}
+	:host[active="true"] > div{
+		width:200px;
+	}
+	:host[active="true"] input{
+		padding-left: 1.3rem;
+		padding-right: 1.3rem;
+	}
+  </style>
+
+  <template>
+	<div><input type="text" placeholder=""></div>
+	<span data-ng-style="rotatePlus()" on-tap="closeText">+</span>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'x-text-input',
+
+    properties: {
+    },
+
+    listeners: {
+        'closeText': 'closeText'
+    },
+
+    // Element Lifecycle
+
+    ready: function() {
+      // `ready` is called after all elements have been configured, but
+      // propagates bottom-up. This element's children are ready, but parents
+      // are not.
+      //
+      // This is the point where you should make modifications to the DOM (when
+      // necessary), or kick off any processes the element wants to perform.
+    },
+
+    attached: function() {
+      // `attached` fires once the element and its parents have been inserted
+      // into a document.
+      //
+      // This is a good place to perform any work related to your element's
+      // visual state or active behavior (measuring sizes, beginning animations,
+      // loading resources, etc).
+    },
+
+    detached: function() {
+      // The analog to `attached`, `detached` fires when the element has been
+      // removed from a document.
+      //
+      // Use this to clean up anything you did in `attached`.
+    },
+
+    // Element Behavior
+
+    /**
+     * Shrink the text-input element.
+	 * Removes/resets inputed text.
+     */
+    closeText: function() {
+		if(this.getAttribute("active")=="true"){
+			this.querySelector("input").value="";
+			this.setAttribute("active", false);
+		}
+		else{
+			this.setAttribute("active", true);
+		}
+    }
+
+  });
+
+</script>

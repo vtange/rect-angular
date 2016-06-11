@@ -1,0 +1,38 @@
+{
+  "name": "x-text-input",
+  "authors": [
+    "Victor Tang <victortang1992@gmail.com>"
+  ],
+  "description": "HTML text input with X interactive",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "x-text-input.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/vtange/x-text-input/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "c5e675c813",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c5e675c813277e5072abd7add957a2b7eb3d1591"
+  },
+  "_source": "git://github.com/vtange/x-text-input.git",
+  "_target": "master",
+  "_originalSource": "vtange/x-text-input",
+  "_direct": true
+}

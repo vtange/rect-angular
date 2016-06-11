@@ -1,0 +1,26 @@
+{
+  "name": "x-text-input",
+  "version": "1.0.0",
+  "description": "HTML text input with X interactive",
+  "main": "gulpFile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtange/x-text-input.git"
+  },
+  "author": "Victor Tang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtange/x-text-input/issues"
+  },
+  "homepage": "https://github.com/vtange/x-text-input#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-vulcanize": "^6.1.0"
+  }
+}
