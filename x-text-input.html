@@ -75,10 +75,6 @@ Example:
     is: 'x-text-input',
 
     properties: {
-      /**
-       * `blockClicks` indicates that the element should include a fixed, full-screen div element that prevents clicking outside the window.
-       */
-      active: Boolean
     },
 
     listeners: {
@@ -116,7 +112,7 @@ Example:
 
     /**
      * Shrink the text-input element.
-	 *
+	 * Removes/resets inputed text.
      */
     closeText: function() {
 		if(this.getAttribute("active")=="true"){
