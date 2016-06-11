@@ -22,39 +22,42 @@ Example:
 
   <style>
     :host {
-		width:200px;
 		display: flex;
 		flex-direction: row;
 		box-sizing: border-box;
-		border: 2px solid blue;
     }
 	:host > *{
 		transition:all 0.5s ease;
+		line-height: 2rem;
 	}
     :host > span{
 		position: relative;
-		/* when activated 
-		left:1rem;
-		transform: rotate(45deg);
-		*/
+		cursor: pointer;
+		font-size: 3rem;
 	}
 	:host > div{
 		width:0;
-		/* when activated 
-		width:200px;
-		*/
 	}
 	:host input{
-		/* follow width of form, show when activated */
 		width:100%;
+		height:3rem;
 		padding: 0;
 		border: 0;
-		/* when activated
-		padding: 6px 12px;
-		border:1px solid #ccc;
-		*/
+		vertical-align: middle;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.475);
+		border-radius: 2rem;
+		
 	}
-
+	:host[active="true"] > span{
+		transform: rotate(45deg);
+	}
+	:host[active="true"] > div{
+		width:200px;
+	}
+	:host[active="true"] input{
+		padding-left: 1.3rem;
+		padding-right: 1.3rem;
+	}
   </style>
 
   <template>
@@ -71,7 +74,10 @@ Example:
     is: 'x-text-input',
 
     properties: {
-
+      /**
+       * `blockClicks` indicates that the element should include a fixed, full-screen div element that prevents clicking outside the window.
+       */
+      active: Boolean
     },
 
     listeners: {
@@ -112,7 +118,12 @@ Example:
 	 *
      */
     closeText: function() {
-     	this.style.display = "none";
+		if(this.getAttribute("active")=="true"){
+			this.setAttribute("active", false);
+		}
+		else{
+			this.setAttribute("active", true);
+		}
     }
 
   });
