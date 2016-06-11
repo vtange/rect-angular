@@ -22,19 +22,21 @@ Example:
 
   <style>
     :host {
-      display: block;
-      box-sizing: border-box;
+		width:200px;
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
 		border: 2px solid blue;
     }
 	:host > *{
 		transition:all 0.5s ease;
 	}
     :host > span{
-	position: relative;
-	/* when activated 
-	left:1rem;
-	transform: rotate(45deg);
-	*/
+		position: relative;
+		/* when activated 
+		left:1rem;
+		transform: rotate(45deg);
+		*/
 	}
 	:host > div{
 		width:0;
@@ -43,21 +45,21 @@ Example:
 		*/
 	}
 	:host input{
-	/* follow width of form, show when activated */
-	width:100%;
-	padding: 6px 12px;
-	border:1px solid #ccc;
-	/* when activated 
-	padding: 0;
-	border: 0;
-	*/
+		/* follow width of form, show when activated */
+		width:100%;
+		padding: 0;
+		border: 0;
+		/* when activated
+		padding: 6px 12px;
+		border:1px solid #ccc;
+		*/
 	}
 
   </style>
 
   <template>
 	<div><input type="text" placeholder=""></div>
-	<span data-ng-style="rotatePlus()">+</span>
+	<span data-ng-style="rotatePlus()" on-tap="closeText">+</span>
   </template>
 
 </dom-module>
@@ -70,12 +72,10 @@ Example:
 
     properties: {
 
-      /**
-       * `fancy` indicates that the element should don a monocle and tophat,
-       * while checking its pocket watch.
-       */
-      fancy: Boolean
+    },
 
+    listeners: {
+        'closeText': 'closeText'
     },
 
     // Element Lifecycle
@@ -108,19 +108,11 @@ Example:
     // Element Behavior
 
     /**
-     * The `x-text-input-lasers` event is fired whenever `fireLasers` is called.
-     *
-     * @event x-text-input-lasers
-     * @detail {{sound: String}}
+     * Shrink the text-input element.
+	 *
      */
-    /**
-     * Attempts to destroy this element's enemies with an any beam of light!
-     *
-     * Or, at least, dispatches an event in the vain hope that someone else will
-     * do the zapping.
-     */
-    fireLasers: function() {
-     
+    closeText: function() {
+     	this.style.display = "none";
     }
 
   });
